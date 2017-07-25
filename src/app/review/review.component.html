@@ -1,0 +1,37 @@
+<hr>
+<h3>Quiz Result</h3>
+<article class="review-content" *ngFor="let question of questions;  let i = index">
+  <h3>{{i+1}}. {{question.question}}</h3>
+  <div class="question-content-50">
+    <div >
+      <input type="checkbox" name="btn1" disabled [checked]="question.btn1.answer">
+      <label for="btn1">{{question.btn1.label}}</label> 
+    </div>
+  </div>
+  <div class="question-content-50">
+    <div >
+      <input type="checkbox" name="btn2" disabled [checked]="question.btn2.answer">
+      <label for="btn2">{{question.btn2.label}}</label>   
+    </div>
+  </div>
+  <div class="question-content-50">
+    <div >
+      <input type="checkbox" name="btn3" disabled [checked]="question.btn3.answer">
+      <label for="btn3">{{question.btn3.label}}</label> 
+    </div>
+  </div>
+  <div class="question-content-50">
+    <div >
+      <input type="checkbox" name="btn4" disabled [checked]="question.btn4.answer">
+      <label for="btn4">{{question.btn4.label}}</label> 
+    </div>
+  </div>
+  <div class="answer-good" [hidden]="!evaluateQuestion(question)">
+    Your answer is correct
+  </div>
+  <div class="answer-bad" [hidden]="evaluateQuestion(question)">
+    Your answer is incorrect
+  </div>
+</article>
+<div class="clear"></div>
+<hr>

@@ -1,0 +1,44 @@
+<article [hidden]="!viewQuiz">
+  <span class="question-desc">Question {{init+1}} of {{finish}}</span>
+  <br>
+  <h3>{{init+1}}. {{question.question}} </h3>
+  <div class="question-content-50">
+    <div class="question" (click)="setAnswer(question.btn1.id)">
+      <input type="checkbox" name="btn1" disabled [checked]="question.btn1.answer"  >
+      <label for="btn1"> {{question.btn1.label}} </label> 
+    </div>
+  </div>
+  <div class="question-content-50">
+    <div class="question" (click)="setAnswer(question.btn2.id)">
+      <input type="checkbox" name="btn2" disabled [checked]="question.btn2.answer" >
+      <label for="btn2"> {{question.btn2.label}} </label>   
+    </div>
+  </div>
+  <div class="question-content-50">
+    <div class="question" (click)="setAnswer(question.btn3.id)">
+      <input type="checkbox" name="btn3" disabled [checked]="question.btn3.answer" >
+      <label for="btn3"> {{question.btn3.label}} </label> 
+    </div>
+  </div>
+  <div class="question-content-50">
+    <div class="question" (click)="setAnswer(question.btn4.id)">
+      <input type="checkbox" name="btn4" disabled [checked]="question.btn4.answer" >
+      <label for="btn4"> {{question.btn4.label}} </label> 
+    </div>
+  </div>
+  <div class="clear"></div>
+  <hr>
+  <div class="btn-container" (resetQuest)="resetQuestions($event)">
+    <button (click)="changeQuestion('first')" [disabled]="disabledPrev">First</button>
+    <button (click)="changeQuestion('prev')"  [disabled]="disabledPrev">Prev</button>
+    <button (click)="changeQuestion('next')"  [disabled]="disabledNext">Next</button>
+    <button (click)="changeQuestion('last')"  [disabled]="disabledNext">Last</button>
+  </div>
+  <hr>
+</article>
+<app-result [hidden]="!viewResult" [questions]="questions"></app-result>
+<app-review [hidden]="!viewReview" [questions]="questions"></app-review>
+
+<button (click)="changeQuestion('')">Quiz</button>
+<button (click)="changeView('viewReview')" [disabled]="disableReview">Review</button>
+<button (click)="changeView('viewResult')">Submit Quiz</button>  

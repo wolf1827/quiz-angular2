@@ -1,0 +1,10 @@
+<hr>
+<article>
+  <div class="question-content-30" *ngFor="let question of questions;  let i = index">
+    <div class="answered" [ngClass]="{good: evaluateQuestion(question)=='Answered', bad: evaluateQuestion(question)=='Not Answered'}">
+      <label for="btn1"> {{i+1}}. {{evaluateQuestion(question)}} </label> 
+    </div>
+  </div>
+</article>
+<div class="clear"></div>
+<hr>

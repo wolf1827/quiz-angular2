@@ -1,1 +1,117 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color:#636363;
+}
+.container{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: .5em;
+    box-sizing: border-box;
+}
+.question-desc{
+    display: inline-block;
+    background-color: #5dc0dc;
+    color: white;
+    padding: .2em;
+    border-radius: 5px;
+}
+.question-content-50{
+    display: inline-flex;
+    padding: .2em .5em;
+    width: 49%;
+    box-sizing: border-box;
+}
+.question-content-30{
+    display: inline-flex;
+    float: left;
+    padding: .2em .5em;
+    width: 33.3%;
+    box-sizing: border-box;
+}
+.question{
+    background-color: #c9daee;
+    color: #636363;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    padding: .7em .5em;
+    box-sizing: border-box;
+    cursor:pointer;
+}
+.question input{
+    vertical-align: middle;
+}
+.answer-good{
+    padding: .7em .4em;
+    color: rgb(45, 125, 6);
+    background-color: #d1efc7;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+.answer-bad{
+    padding: .7em .4em;
+    color: rgb(138, 8, 8);
+    background-color: #ffcccb;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+.answered{
+    color: #636363;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    padding: .7em .5em;
+    box-sizing: border-box;
+}
+.review-content{
+    background-color: #eeeeee;
+    padding: .5em;
+    margin-bottom: .5em;
+}
+.good{
+    background-color: #cbffc8;
+}
+.bad{
+    background-color: #ffcccb;
+}
+.btn-container{
+    text-align: center;
+}
+.clear{
+    clear: both;
+    margin-bottom: .4em;
+}
+button{
+    border: none;
+    padding: .7em;
+    border-radius: 5px;
+    cursor: pointer;
+    color:#636363;
+}
+button:active{
+    background: #0075d2;
+    color:white;
+}
+button:hover{
+    background: #0075d2;
+    color:white;
+}
+button[disabled]:hover {
+    background-color: #adabab;
+    color: white;
+}
+button[disabled] {
+    background-color: #adabab;
+    color: white;
+}
+hr{
+    border-top: 1px solid #dadada;
+}
+h3{
+    margin: 0;
+    font-weight: 100;
+    font-size: 2em;
+    padding: .3em 0;
+}

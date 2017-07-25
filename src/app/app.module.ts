@@ -1,11 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, EventEmitter } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { ResultComponent } from './result/result.component';
+import { ReviewComponent } from './review/review.component';
+import { QuizComponent } from './quiz/quiz.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ResultComponent,
+    ReviewComponent,
+    QuizComponent
   ],
   imports: [
     BrowserModule
@@ -13,4 +19,6 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+ }
